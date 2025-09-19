@@ -1,11 +1,10 @@
----
-title: File Organisation Schema
-layout: home
-nav_order: 2
----
+# File Organisation Schema
 
+In order to manage heritage data smoothly during the preservation and publication process, each project has to follow some standards. file naming conventions and folder hierarchy standards are especially important for establishing clear communication between different responsible bodies within the project. 
+This section explains the general rules and reasonings of MAEASaM Projects standards. Also explains special cases for multiple people working in same folder.
+Note: This is the second version of the document created at 19/09/2025 by OU. And following the requirements of the teams and feedback and discussions this file can be revisit and improved.
+In case of any question or suggestions, please feel free to ask digital data coordinator (email).
 
-# FILE ORGANISATION SCHEMA
 ## FILE NAMING
 
 File names can carry important information about the file itself, without needing to open it or read documentation. The main types of information a file name can convey include the date, the collection or group it belongs to (if any), the file’s title, the initials of the person who prepared it, and the version number.
@@ -135,7 +134,7 @@ Virus scan reports
 Checksum reports (data integrity)
 You can skip this for now (Phase 1), but it's important for later phases.
  
-HIERARCHY TREE
+## HIERARCHY TREE
 Here is the link for the sample folder: https://drive.google.com/drive/u/1/folders/1QStNkjUmF8AfAXeaEsC48V0jMpJlGpzi
 Here is a way to show the structure:
 PHASE 1
@@ -185,3 +184,11 @@ PHASE 1
 ---------Reports (Folder)
 ---------Feedback (Folder)
 ---------Templates (Folder)
+
+## Special Cases
+
+Each country might require specific rules when organising their data through the project. Following the similar standards as explained before minor adjustment can be done.
+
+Working with multiple people
+
+Working with different batches
