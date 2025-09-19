@@ -2,13 +2,23 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: 00_intro
 chapters:
 - file: 01_data-structure
-- file: 02_metadata-schema
-- file: 03_controlled-vocabularies
-- file: 03.01_CV-HeritageSites
-- file: 03.02_CV-Chronology
+  sections:
+  - file: 02_Metadata-Templates
+    sections:
+    - file: 02.01_Sites-Template
+    - file: 02.02_RS-Template
+  - file: 03_controlled-vocabularies
+    sections:
+    - file: 03.01_CV-HeritageSites
+    - file: 03.02_CV-Chronology
 - file: 04_file-organisation-schema
-- file: notebooks
-- file: markdown-notebooks
+- file: 05_dmp
+- file: 06_data-policy
+- file: 07_Guidelines
+
+# - file: notebooks
+# - file: markdown-notebooks
+# - file: markdown
