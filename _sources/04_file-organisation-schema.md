@@ -2,7 +2,11 @@
 
 In order to manage heritage data smoothly during the preservation and publication process, each project has to follow some standards. file naming conventions and folder hierarchy standards are especially important for establishing clear communication between different responsible bodies within the project. 
 This section explains the general rules and reasonings of MAEASaM Projects standards. Also explains special cases for multiple people working in same folder.
-Note: This is the second version of the document created at 19/09/2025 by OU. And following the requirements of the teams and feedback and discussions this file can be revisit and improved.
+
+```{note}
+:class: dropdown
+This is the second version of the document created at 19/09/2025 by OU. And following the requirements of the teams and feedback and discussions this file can be revisit and improved.
+```
 In case of any question or suggestions, please feel free to ask digital data coordinator (email).
 
 ## FILE NAMING
