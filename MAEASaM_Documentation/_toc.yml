@@ -4,6 +4,11 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
+- file: 01_data-structure
+- file: 02_metadata-schema
+- file: 03_controlled-vocabularies
+- file: 03.01_CV-HeritageSites
+- file: 03.02_CV-Chronology
+- file: 04_file-organisation-schema
 - file: notebooks
 - file: markdown-notebooks
