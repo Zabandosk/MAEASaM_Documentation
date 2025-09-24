@@ -1,15 +1,16 @@
 # File Organisation Schema
 
-In order to manage heritage data smoothly during the preservation and publication process, each project has to follow some standards. file naming conventions and folder hierarchy standards are especially important for establishing clear communication between different responsible bodies within the project. 
-This section explains the general rules and reasonings of MAEASaM Projects standards. Also explains special cases for multiple people working in same folder.
+To ensure consistent management of heritage data during preservation and publication, each project must follow shared standards. File naming conventions and folder hierarchy are particularly important for maintaining clear communication between all responsible parties.
+This document explains the general rules and rationale of the MAEASaM Project standards. It also outlines special cases for collaborative work within the same folder.
+
 
 ```{note}
 :class: dropdown
-This is the second version of the document created at 19/09/2025 by OU. And following the requirements of the teams and feedback and discussions this file can be revisit and improved.
+This is Version 2 of the document, created on 19/09/2025 by OU. Based on team requirements, feedback, and ongoing discussions, the document may be revised and improved.
 ```
-In case of any question or suggestions, please feel free to ask digital data coordinator (email).
+For questions or suggestions, please contact the Digital Data Coordinator (email).
 
-## FILE NAMING
+## File Naming
 
 File names can carry important information about the file itself, without needing to open it or read documentation. The main types of information a file name can convey include the date, the collection or group it belongs to (if any), the file’s title, the initials of the person who prepared it, and the version number.
 
@@ -33,7 +34,7 @@ This approach avoids long names, spaces, and special characters, making your fil
 The same logic applies to other information resources, e.g.:
 GAM-RES-000001_TitleOfDocument.pdf
 
-## FOLDER HIERARCHY
+## Folder Hierarchy
 
 There are two main categories of data you will produce during the process:
 
