@@ -377,7 +377,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -393,6 +395,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">Heritage Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">DOCUMENTATION</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,32 +429,47 @@ document.write(`
 <h1>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">#</a></h1>
 <p>Data are divided into two main categories:</p>
 <ol class="arabic simple">
-<li><p>Heritage Data
-o	Sites
-o	Remote Sensing
-o	Media
-o	Resources</p></li>
-<li><p>Documentation
-o	Reports
-o	Feedback
-o	Dataset Details
-o	Templates
-o	Guidelines
-This structure makes it easier to manage, review, and prepare datasets for final delivery.
-(Note)Visit Folder Hierarchy to see details more visually when necessary.
-Heritage Data
-This is the main group containing all files and folders that represent heritage data in different formats. The purpose of organising data in this way is to make the workflow predictable, so that anyone opening the dataset can immediately understand where to find specific types of information.</p></li>
+<li><p>Heritage Data</p></li>
 </ol>
+<ul class="simple">
+<li><p>Sites</p></li>
+<li><p>Remote Sensing</p></li>
+<li><p>Media</p></li>
+<li><p>Resources</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Documentation</p></li>
+</ol>
+<ul class="simple">
+<li><p>Reports</p></li>
+<li><p>Feedback</p></li>
+<li><p>Dataset Details</p></li>
+<li><p>Templates</p></li>
+<li><p>Guidelines</p></li>
+</ul>
+<p>This structure makes it easier to manage, review, and prepare datasets for final delivery.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See the Folder Hierarchy section for a visual representation of this structure.</p>
+</div>
+<section id="heritage-data">
+<h2>Heritage Data<a class="headerlink" href="#heritage-data" title="Link to this heading">#</a></h2>
+<p>This is the main group containing all files and folders that represent heritage data in different formats. The purpose of organising data in this way is to make the workflow predictable, so that anyone opening the dataset can immediately understand where to find specific types of information.</p>
 <hr class="docutils" />
-<p>Sites
-The Sites folder stores all information related to heritage site records. It is divided into two main parts:</p>
+<section id="sites">
+<h3>Sites<a class="headerlink" href="#sites" title="Link to this heading">#</a></h3>
+<p>The Sites folder stores all information related to heritage site records. It is divided into two main parts:</p>
 <ol class="arabic simple">
-<li><p>Metadata folder
-o	Contains working spreadsheets (.xlsx).
-o	Naming convention:
-yyyymmdd_GAM_SiteMetadata_LB.xlsx
-o	You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.
-o	These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.</p></li>
+<li><p>Metadata folder</p></li>
+</ol>
+<ul class="simple">
+<li><p>Contains working spreadsheets (.xlsx).</p></li>
+<li><p>Naming convention:
+yyyymmdd_GAM_SiteMetadata_LB.xlsx</p></li>
+<li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
+<li><p>These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
 <li><p>Geometry folder
 o	This folder contains the spatial information. Since sites can be represented in different shapes (points, polygons, lines), the Geometry folder is divided into three subfolders:
 	Points (for locations defined by coordinates)
@@ -444,9 +482,11 @@ o	Inside, files must be exported in the following formats:
 o	These are standard GIS formats required for interoperability. Other export files (e.g., .shx, .qmd) are optional.
 o	The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p></li>
 </ol>
+</section>
 <hr class="docutils" />
-<p>Remote Sensing
-The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:</p>
+<section id="remote-sensing">
+<h3>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h3>
+<p>The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:</p>
 <ol class="arabic simple">
 <li><p>Metadata folder
 o	Spreadsheet (.xlsx), named as:
@@ -462,9 +502,11 @@ yyyymmdd_GAM_RSPoints_LB.shp
 yyyymmdd_GAM_RSFootprints_LB.dbf
 o	This parallel structure is intentional: it makes the system easier to learn and ensures that whether you are dealing with site or remote sensing data, the organisation looks and feels the same.</p></li>
 </ol>
+</section>
 <hr class="docutils" />
-<p>Media
-The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).
+<section id="media">
+<h3>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h3>
+<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).
 •	A metadata spreadsheet must be included:
 01_GAM_MediaMetadata_LB.xlsx
 o	The prefix “01_” ensures this file always appears at the top of the folder, so it can be found quickly.
@@ -472,23 +514,35 @@ o	The prefix “01_” ensures this file always appears at the top of the folder
 o	Example:
 GAM-MED-000001_Wassu01.jpg
 •	For now, files may be uploaded in their existing form, as long as they are in one of the accepted formats: .jpg, .jpeg, .png, .tiff.
-•	This approach makes it easier to track individual media items while ensuring they can be linked to metadata records later.
-Note: Since media is not the main focus point if the MAEASaM repository this approach is also very useful for local management of the files.</p>
+•	This approach makes it easier to track individual media items while ensuring they can be linked to metadata records later.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Media files, being secondary to the main MAEASaM repository, can benefit from this structure to simplify local management and tracking.</p>
+</div>
+</section>
 <hr class="docutils" />
-<p>Resources
-The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.
+<section id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
+<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.
 •	Metadata spreadsheet:
 01_GAM_ResourceMetadata_LB.xlsx
 •	Files should be stored in open, sustainable formats such as: .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.
 •	Example:
 GAM-RES-000001_TitleOfResource.pdf
-•	By storing resources in stable formats, we reduce the risk of future accessibility problems. This also ensures that others can re-use and verify the sources you used.
-Note: This section is optional at this stage as resources are managed via Zotero. But it can be used as a place to store this information.
-DOCUMENTATION
-The Documentation group contains files that describe, explain, or support the heritage data. While the Heritage Data folders store the raw and processed data itself, the Documentation folders provide the context that makes those datasets understandable and reusable. Without documentation, the data may be difficult to interpret in the future, even for the person who originally created it.
-This group is therefore essential for communication between project members and for long-term data preservation.
-Dataset Details
-The Dataset Details document is mandatory. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.
+•	By storing resources in stable formats, we reduce the risk of future accessibility problems. This also ensures that others can re-use and verify the sources you used.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While resource management is currently handled via Zotero, this section may still be used as a supplementary location for storing resource information.</p>
+</div>
+</section>
+</section>
+<section id="documentation">
+<h2>DOCUMENTATION<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+<p>The Documentation group contains files that describe, explain, or support the heritage data. While the Heritage Data folders store the raw and processed data itself, the Documentation folders provide the context that makes those datasets understandable and reusable. Without documentation, the data may be difficult to interpret in the future, even for the person who originally created it.
+This group is therefore essential for communication between project members and for long-term data preservation.</p>
+<section id="dataset-details">
+<h3>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h3>
+<p>The Dataset Details document is mandatory. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.
 •  Required contents:
 Responsible person(s)
 Contact information
@@ -498,9 +552,11 @@ Access and rights information
 •  Final version format: .pdf or .pdf/a (for long-term preservation)
 •  Example:
 yyyymmdd_GAM_DatasetDetails_LB.pdf
-Why this matters: Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.
-Feedback
-This folder collects all reviews, corrections, and notes created during the project. Feedback is an important part of the iterative process of data cleaning and preparation.
+Why this matters: Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.</p>
+</section>
+<section id="feedback">
+<h3>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
+<p>This folder collects all reviews, corrections, and notes created during the project. Feedback is an important part of the iterative process of data cleaning and preparation.
 •	Both the Digital Data Coordinator and other project members may upload feedback here.
 •	File naming should follow the original file name with “Feedback” and the reviewer’s initials added.
 •	Example:
@@ -509,9 +565,11 @@ o	yyyymmdd_GAM_SiteMetadata_Feedback_OU.xlsx
 •	Specific cases (such as Arches ingestion results) should also be stored here, with the same naming logic.
 o	Example:
 20250807_GAM_ArchesManualEntry_Feedback_OU.pdf
-Why this matters: Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.
-Templates
-This folder contains the official templates for metadata and related documents.
+Why this matters: Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.</p>
+</section>
+<section id="templates">
+<h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
+<p>This folder contains the official templates for metadata and related documents.
 •	Typical contents include:
 o	Sites Metadata Schema
 o	Remote Sensing Metadata Schema
@@ -519,9 +577,11 @@ o	Media Metadata Schema
 o	Dataset Details Template
 •	Always check this folder before beginning new work, to ensure that you are using the most up-to-date version.
 •	The Digital Data Coordinator will also inform you if templates are revised.
-Why this matters: Templates guarantee consistency. If everyone uses the same structure, datasets from different countries or contributors can be merged smoothly, without time-consuming reformatting.
-Reports
-The Reports folder contains technical reports related to the dataset lifecycle.
+Why this matters: Templates guarantee consistency. If everyone uses the same structure, datasets from different countries or contributors can be merged smoothly, without time-consuming reformatting.</p>
+</section>
+<section id="reports">
+<h3>Reports<a class="headerlink" href="#reports" title="Link to this heading">#</a></h3>
+<p>The Reports folder contains technical reports related to the dataset lifecycle.
 •	Examples include:
 o	Merge reports (e.g., combining versions or datasets)
 o	Virus scan results
@@ -529,6 +589,8 @@ o	Checksum reports (to verify data integrity)
 •	Example naming:
 yyyymmdd_GAM_v1-v2_MergeReport_LB.pdf
 Why this matters: Reports provide evidence that the data has been checked and verified. They help build trust in the dataset by showing that quality control measures were followed. This becomes increasingly important in later phases of the project, when datasets are archived or published.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -585,6 +647,34 @@ Why this matters: Reports provide evidence that the data has been checked and ve
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">Heritage Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">DOCUMENTATION</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
