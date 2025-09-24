@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '04_file-organisation-schema';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hierarchy Tree" href="04.031_hierarchy_text.html" />
+    <link rel="next" title="File Naming" href="04.01_file-naming.html" />
     <link rel="prev" title="Chronology (CV)" href="03.02_CV-Chronology.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -194,6 +194,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">File Organisation Schema</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04.01_file-naming.html">File Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.02_folder-hierarchy.html">Folder Hierarchy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04.031_hierarchy_text.html">Hierarchy Tree</a></li>
 </ul>
 </details></li>
@@ -375,9 +377,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -393,33 +393,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-naming">File Naming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-hierarchy">Folder Hierarchy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">HERITAGE DATA</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">DOCUMENTATION</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-tree">HIERARCHY TREE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -438,196 +411,6 @@ This document explains the general rules and rationale of the MAEASaM Project st
 <p>This is Version 2 of the document, created on 19/09/2025 by OU. Based on team requirements, feedback, and ongoing discussions, the document may be revised and improved.</p>
 </div>
 <p>For questions or suggestions, please contact the Digital Data Coordinator (email).</p>
-<section id="file-naming">
-<h2>File Naming<a class="headerlink" href="#file-naming" title="Link to this heading">#</a></h2>
-<p>File names can carry important information about the file itself, without needing to open it or read documentation. The main types of information a file name can convey include the date, the collection or group it belongs to (if any), the file’s title, the initials of the person who prepared it, and the version number.</p>
-<p><strong>Here is an example format:</strong></p>
-<p>yyyymmdd_Group_Title_Initials_version.format
-20250806_GAM_SitePoints_LB_v01.shp</p>
-<p>The reason for using the year-month-day system (YYYYMMDD) is to ensure that files are sorted chronologically when read by machines, since sorting is typically done from left to right. Using this naming system will help your files be ordered automatically by date.
-Avoid using spaces and special characters (such as ^, &amp;, %, ‘, “ etc.) in file and folder names. These may prevent systems from detecting or reading the files correctly, and in some cases, files may not upload or be analysed properly, especially when you’re dealing with a large number of files. This is also a common reason for issues with Arches when reading spreadsheet cells that include such characters.</p>
-<p>If you have a good version of a file and later need to make even a small change, always create a new copy. This way, if something goes wrong in the new version, you still have the previous, working version saved.
-These file naming standards can be applied to all types of data and are especially useful during ongoing work, as they make it easier to manage files on the path to a final version.
-In special cases, such as image files or resources related to a site where you are not the file’s creator, there is no need to include the creation date, initials, or version number. Instead, you can assign a unique ID and a short descriptive name to improve findability.</p>
-<p>Example:
-GAM-MED-000001_Wassu01.jpg
-GAM-MED-000002_Wassu02.jpg</p>
-<p>This approach avoids long names, spaces, and special characters, making your file names machine-readable and ensuring compatibility with Arches and other systems.
-The same logic applies to other information resources, e.g.:
-GAM-RES-000001_TitleOfDocument.pdf</p>
-</section>
-<section id="folder-hierarchy">
-<h2>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">#</a></h2>
-<p>There are two main categories of data you will produce during the process:</p>
-<p>Heritage Data, which includes:
-Sites
-Remote Sensing
-Media (e.g. images)
-Resources</p>
-<p>Documentation, which includes:
-Reports
-Feedback
-Dataset Details
-Templates</p>
-<p>Organizing your data in this way makes it easier to manage. Below is a brief overview of what kind of information should be in each folder and the formats expected, to help me check and prepare the data for final delivery.</p>
-<section id="heritage-data">
-<h3>HERITAGE DATA<a class="headerlink" href="#heritage-data" title="Link to this heading">#</a></h3>
-<p>This is the main group containing files and folders that represent heritage data in various formats and types.</p>
-<section id="sites">
-<h4>Sites<a class="headerlink" href="#sites" title="Link to this heading">#</a></h4>
-<p>Includes a Metadata folder (for spreadsheets) and a Geometry folder (for spatial data).
-In the Metadata folder, the working file should be in .xlsx format and named like:
-yyyymmdd_GAM_SiteMetadata_LB.xlsx
-Geometry/Points, Geometry/Polygons and Geometry/Lines folders must include each of the following file formats:
-.cpg, .dbf, .prj, .shp, .kml
-Each folder must have subfolder named as, so that we can follow the same
-Example:
-yyyymmdd_GAM_SitePoints_LB.dbf
-yyyymmdd_GAM_SitePolygons_LB.shp
-…</p>
-</section>
-<section id="remote-sensing">
-<h4>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h4>
-<p>Same structure as Sites: contains Metadata and Geometry folders.
-Metadata folder requires .xlsx as format and naming should be similar, just different in the title of the document part with RS (short for Remote Sensing).
-yyyymmdd_GAM_RSMetadata_LB.xlsx
-Geometry has two subfolders: Points (for specific locations) and Footprints (for area coverage). Files should follow the same naming conventions and formats  as above.
-Each folder has subfolder named as, so that we can follow the same
-yyyymmdd_GAM_ RSPoints_LB
-Files in “Geometry/Points” should be named as:
-yyyymmdd_GAM_RSPoints_LB.cpg
-yyyymmdd_GAM_RSPoints_LB.dbf
-…
-Files in “Geometry/Footprints” should be named as:
-yyyymmdd_GAM_RSFootprints_LB.cpg
-yyyymmdd_GAM_RSFootprints_LB.dbf
-…</p>
-</section>
-<section id="media">
-<h4>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h4>
-<p>Used for images or maybe for other media files in the future (e.g. 3D models, videos, audio).
-Contains a metadata spreadsheet:
-01_GAM_MediaMetadata_LB.xlsx
-(Using 01_ ensures it appears at the top of the folder list.)
-Media files should be named with unique IDs:
-GAM-MED-000001_Wassu01.jpg
-For now, considering the limited time, you may upload your files as they are. Just ensure they are in one of the accepted formats: .jpg, .jpeg, .png, .tiff.</p>
-</section>
-<section id="resources">
-<h4>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h4>
-<p>This folder includes source materials used while creating your metadata.</p>
-<p>Requires a metadata file:
-01_GAM_ResourceMetadata_LB.xlsx
-Documents should be stored in open, sustainable formats like .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff, depending on content.
-Example:
-GAM-RES-000001_TitleOfResource.pdf
-Since you’re also using Zotero, and I’m not fully familiar with your setup, feel free to drop the documents directly for now.</p>
-</section>
-</section>
-<section id="documentation">
-<h3>DOCUMENTATION<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
-<p>This main group is for related documents for your heritage data which enable us to communicate during the process and learn more about the dataset you manage.</p>
-<section id="dataset-details">
-<h4>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h4>
-<p>Dataset details is a required document. It should include:
-Responsible person(s)
-Contact information
-Dataset description (number of files, formats, associated media, etc.)
-Access and rights information
-This document allows me, or any future archaeologist, archivist, or even yourself, to understand the contents of your dataset. It also helps you keep track of your progress, especially when returning to the project after some time away.
-Use .docx during drafting and save the final version as .pdf or .pdf/a.
-Naming example:
-yyyymmdd_GAM_DatasetDetails_LB.pdf</p>
-</section>
-<section id="feedback">
-<h4>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h4>
-<p>This is where both of us will leave feedback.
-I will upload my reviews and feedback on specific files to this folder.
-Renier may also add feedback on Arches ingestion results.
-Feedback files should be named similarly to the original file, with “Feedback” and initials added.
-Examples:
-yyyymmdd_GAM_SiteMetadata_Feedback_OU.pdf
-yyyymmdd_GAM_SiteMetadata_Feedback_OU.xlsx
-My current feedback file on your Arches manual entries will be shared as:
-20250807_GAM_ArchesManualEntry_Feedback_OU.pdf</p>
-</section>
-<section id="templates">
-<h4>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h4>
-<p>Contains the latest versions of metadata schemas for:
-Sites
-Remote Sensing
-Media
-Dataset Details
-Please check this folder regularly to ensure you are using the correct version. I will also update you if we created new versions of our templates.</p>
-</section>
-<section id="reports">
-<h4>Reports<a class="headerlink" href="#reports" title="Link to this heading">#</a></h4>
-<p>This folder is for:
-Major updates about data lifecycle stages
-Virus scan reports
-Checksum reports (data integrity)
-You can skip this for now (Phase 1), but it’s important for later phases.</p>
-</section>
-</section>
-</section>
-<section id="hierarchy-tree">
-<h2>HIERARCHY TREE<a class="headerlink" href="#hierarchy-tree" title="Link to this heading">#</a></h2>
-<p>Here is the link for the sample folder: <a class="reference external" href="https://drive.google.com/drive/u/1/folders/1QStNkjUmF8AfAXeaEsC48V0jMpJlGpzi">https://drive.google.com/drive/u/1/folders/1QStNkjUmF8AfAXeaEsC48V0jMpJlGpzi</a>
-Here is a way to show the structure:
-PHASE 1
-—GAM (Folder)
-——Heritage Data (Folder)
-———Sites (Folder)
-————Geometry (Folder)
-—————Points (Folder)
-——————yyyymmdd_CountryCode_SitePoints_PersonInitials.cpg
-——————yyyymmdd_CountryCode_SitePoints_PersonInitials.dbf
-——————yyyymmdd_CountryCode_SitePoints_PersonInitials.prj
-——————yyyymmdd_CountryCode_SitePoints_PersonInitials.shp
-——————yyyymmdd_CountryCode_SitePoints_PersonInitials.kml
-—————Polygons (Folder)
-——————yyyymmdd_CountryCode_SitePolygons_PersonInitials.cpg
-——————yyyymmdd_CountryCode_SitePolygons_PersonInitials.dbf
-——————yyyymmdd_CountryCode_SitePolygons_PersonInitials.prj
-——————yyyymmdd_CountryCode_SitePolygons_PersonInitials.shp
-——————yyyymmdd_CountryCode_SitePolygons_PersonInitials.kml
-—————Lines (Folder)
-————Metadata (Folder)
-—————“yyyymmdd_CountryCode_SiteMetadata_PersonInitials.xlsx”
-———Remote Sensing (Folder)
-————Metadata (Folder)
-—————“yyyymmdd_CountryCode _RSMetadata_PersonInitials.xlsx”
-————Geometry (Folder)
-—————Points (Folder)
-——————yyyymmdd_CountryCode_RSPoints_PersonInitials.cpg
-——————yyyymmdd_CountryCode_RSPoints_PersonInitials.dbf
-——————yyyymmdd_CountryCode_RSPoints_PersonInitials.prj
-——————yyyymmdd_CountryCode_RSPoints_PersonInitials.shp
-——————yyyymmdd_CountryCode_RSPoints_PersonInitials.kml
-—————Footprints (Folder)
-——————yyyymmdd_CountryCode_RSFootprints_PersonInitials.cpg
-——————yyyymmdd_CountryCode_RSFootprints_PersonInitials.dbf
-——————yyyymmdd_CountryCode_RSFootprints_PersonInitials.prj
-——————yyyymmdd_CountryCode_RSFootprints_PersonInitials.shp
-——————yyyymmdd_CountryCode_RSFootprints_PersonInitials.kml
-———Media (Folder)
-————yyyymmdd_CountryCode_MediaMetadata_PersonInitials.jpg
-————MediaID_MediaName.jpg
-———Resources (Folder)
-————yyyymmdd_CountryCode_ResourceMetadata_PersonInitials.jpg
-————ResourceID_TitleOfResource.pdf
-——Documentation (Folder)
-———Dataset Details (Folder)
-———Reports (Folder)
-———Feedback (Folder)
-———Templates (Folder)</p>
-</section>
-<section id="special-cases">
-<h2>Special Cases<a class="headerlink" href="#special-cases" title="Link to this heading">#</a></h2>
-<p>Each country might require specific rules when organising their data through the project. Following the similar standards as explained before minor adjustment can be done.</p>
-<p>Working with multiple people</p>
-<p>Working with different batches</p>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -672,11 +455,11 @@ PHASE 1
       </div>
     </a>
     <a class="right-next"
-       href="04.031_hierarchy_text.html"
+       href="04.01_file-naming.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hierarchy Tree</p>
+        <p class="prev-next-title">File Naming</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -686,40 +469,6 @@ PHASE 1
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-naming">File Naming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folder-hierarchy">Folder Hierarchy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">HERITAGE DATA</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">DOCUMENTATION</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy-tree">HIERARCHY TREE</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#special-cases">Special Cases</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
