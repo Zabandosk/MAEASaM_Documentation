@@ -427,20 +427,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="folder-hierarchy">
 <h1>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">#</a></h1>
-<p>Data are divided into two main categories:</p>
-<ol class="arabic simple">
-<li><p>Heritage Data</p></li>
-</ol>
+<p>Data are divided into two main categories:
+<em><strong>1.	Heritage Data</strong></em></p>
 <ul class="simple">
 <li><p>Sites</p></li>
 <li><p>Remote Sensing</p></li>
 <li><p>Media</p></li>
-<li><p>Resources</p></li>
-</ul>
-<ol class="arabic simple" start="2">
-<li><p>Documentation</p></li>
-</ol>
-<ul class="simple">
+<li><p>Resources
+<em><strong>2.	Documentation</strong></em></p></li>
 <li><p>Reports</p></li>
 <li><p>Feedback</p></li>
 <li><p>Dataset Details</p></li>
@@ -458,41 +452,41 @@ document.write(`
 <hr class="docutils" />
 <section id="sites">
 <h3>Sites<a class="headerlink" href="#sites" title="Link to this heading">#</a></h3>
-<p>The Sites folder stores all information related to heritage site records. It is divided into two main parts:</p>
-<ol class="arabic simple">
-<li><p>Metadata folder</p></li>
-</ol>
+<p>The Sites folder stores all information related to heritage site records. It is divided into two main parts:
+<em><strong>1.	Metadata folder</strong></em></p>
 <ul class="simple">
 <li><p>Contains working spreadsheets (.xlsx).</p></li>
-<li><p>Naming convention:
-yyyymmdd_GAM_SiteMetadata_LB.xlsx</p></li>
-<li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
-<li><p>These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.</p></li>
 </ul>
-<ol class="arabic simple" start="2">
-<li><p>Geometry folder
-o	This folder contains the spatial information. Since sites can be represented in different shapes (points, polygons, lines), the Geometry folder is divided into three subfolders:
-	Points (for locations defined by coordinates)
-	Polygons (for areas such as site boundaries)
-	Lines (for linear features such as walls or roads)
-o	Each of these subfolders must include a dated working folder, for example:
-yyyymmdd_GAM_SitePoints_LB
-o	Inside, files must be exported in the following formats:
-.cpg, .dbf, .prj, .shp, .kml
-o	These are standard GIS formats required for interoperability. Other export files (e.g., .shx, .qmd) are optional.
-o	The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p></li>
-</ol>
+<p><em><strong>Naming convention:</strong></em>
+yyyymmdd_GAM_SiteMetadata_LB.xlsx</p>
+<ul class="simple">
+<li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
+<li><p>These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.
+<em><strong>2.	Geometry folder</strong></em></p></li>
+</ul>
+<p>This folder contains the spatial information. Since sites can be represented in different shapes (points, polygons, lines), the Geometry folder is divided into three subfolders:</p>
+<ul class="simple">
+<li><p>Points (for locations defined by coordinates)</p></li>
+<li><p>Polygons (for areas such as site boundaries)</p></li>
+<li><p>Lines (for linear features such as walls or roads)</p></li>
+</ul>
+<p>Each of these subfolders must include a dated working folder.</p>
+<p><em><strong>Example</strong></em>
+yyyymmdd_GAM_SitePoints_LB</p>
+<p>Inside, files must be exported in the following formats:
+.cpg, .dbf, .prj, .shp, .kml</p>
+<p>These are standard GIS formats required for interoperability. Other export files (e.g., .shx, .qmd) are optional.</p>
+<p>The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p>
 </section>
 <hr class="docutils" />
 <section id="remote-sensing">
 <h3>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h3>
-<p>The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:</p>
-<ol class="arabic simple">
-<li><p>Metadata folder
+<p>The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:
+<em><strong>1.	Metadata folder</strong></em>
 o	Spreadsheet (.xlsx), named as:
 yyyymmdd_GAM_RSMetadata_LB.xlsx
-o	The “RS” tag ensures that metadata for remote sensing datasets is distinguishable from site metadata.</p></li>
-<li><p>Geometry folder
+o	The “RS” tag ensures that metadata for remote sensing datasets is distinguishable from site metadata.
+<em><strong>2.	Geometry folder</strong></em>
 o	Divided into two subfolders:
 	Points (e.g., sensor locations, reference points)
 	Footprints (areas covered by imagery or remote sensing data)
@@ -500,21 +494,22 @@ o	Naming follows the same pattern as in Sites, but with “RS” in the title.
 o	Example:
 yyyymmdd_GAM_RSPoints_LB.shp
 yyyymmdd_GAM_RSFootprints_LB.dbf
-o	This parallel structure is intentional: it makes the system easier to learn and ensures that whether you are dealing with site or remote sensing data, the organisation looks and feels the same.</p></li>
-</ol>
+o	This parallel structure is intentional: it makes the system easier to learn and ensures that whether you are dealing with site or remote sensing data, the organisation looks and feels the same.</p>
 </section>
 <hr class="docutils" />
 <section id="media">
 <h3>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h3>
-<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).
-•	A metadata spreadsheet must be included:
-01_GAM_MediaMetadata_LB.xlsx
-o	The prefix “01_” ensures this file always appears at the top of the folder, so it can be found quickly.
-•	Each media file should be assigned a unique ID and short descriptive name.
-o	Example:
-GAM-MED-000001_Wassu01.jpg
-•	For now, files may be uploaded in their existing form, as long as they are in one of the accepted formats: .jpg, .jpeg, .png, .tiff.
-•	This approach makes it easier to track individual media items while ensuring they can be linked to metadata records later.</p>
+<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).</p>
+<ul class="simple">
+<li><p>A metadata spreadsheet must be included:
+01_GAM_MediaMetadata_LB.xlsx</p></li>
+<li><p>The prefix “01_” ensures this file always appears at the top of the folder, so it can be found quickly.</p></li>
+<li><p>Each media file should be assigned a unique ID and short descriptive name.
+<em><strong>Example:</strong></em>
+GAM-MED-000001_Wassu01.jpg</p></li>
+<li><p>For now, files may be uploaded in their existing form, as long as they are in one of the accepted formats: .jpg, .jpeg, .png, .tiff.</p></li>
+<li><p>This approach makes it easier to track individual media items while ensuring they can be linked to metadata records later.</p></li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Media files, being secondary to the main MAEASaM repository, can benefit from this structure to simplify local management and tracking.</p>
@@ -523,13 +518,15 @@ GAM-MED-000001_Wassu01.jpg
 <hr class="docutils" />
 <section id="resources">
 <h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
-<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.
-•	Metadata spreadsheet:
-01_GAM_ResourceMetadata_LB.xlsx
-•	Files should be stored in open, sustainable formats such as: .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.
-•	Example:
-GAM-RES-000001_TitleOfResource.pdf
-•	By storing resources in stable formats, we reduce the risk of future accessibility problems. This also ensures that others can re-use and verify the sources you used.</p>
+<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.</p>
+<ul class="simple">
+<li><p>Metadata spreadsheet:
+01_GAM_ResourceMetadata_LB.xlsx</p></li>
+<li><p>Files should be stored in open, sustainable formats such as: .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.</p></li>
+</ul>
+<p><em><strong>Example:</strong></em>
+GAM-RES-000001_TitleOfResource.pdf</p>
+<p>By storing resources in stable formats, we reduce the risk of future accessibility problems. This also ensures that others can re-use and verify the sources you used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>While resource management is currently handled via Zotero, this section may still be used as a supplementary location for storing resource information.</p>
@@ -542,53 +539,61 @@ GAM-RES-000001_TitleOfResource.pdf
 This group is therefore essential for communication between project members and for long-term data preservation.</p>
 <section id="dataset-details">
 <h3>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h3>
-<p>The Dataset Details document is mandatory. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.
-•  Required contents:
-Responsible person(s)
-Contact information
-Dataset description (number of files, formats, associated media, etc.)
-Access and rights information
-•  Drafting format: .docx
-•  Final version format: .pdf or .pdf/a (for long-term preservation)
-•  Example:
-yyyymmdd_GAM_DatasetDetails_LB.pdf
-Why this matters: Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.</p>
+<p>The Dataset Details document is mandatory. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.</p>
+<p>Required contents:</p>
+<ul class="simple">
+<li><p>Responsible person(s)</p></li>
+<li><p>Contact information</p></li>
+<li><p>Dataset description (number of files, formats, associated media, etc.)</p></li>
+<li><p>Access and rights information</p></li>
+</ul>
+<p>Drafting format: .docx
+Final version format: .pdf or .pdf/a (for long-term preservation)
+<em><strong>Example:</strong></em>
+yyyymmdd_GAM_DatasetDetails_LB.pdf</p>
+<p><strong>Why this matters:</strong> Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.</p>
 </section>
 <section id="feedback">
 <h3>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
 <p>This folder collects all reviews, corrections, and notes created during the project. Feedback is an important part of the iterative process of data cleaning and preparation.
 •	Both the Digital Data Coordinator and other project members may upload feedback here.
 •	File naming should follow the original file name with “Feedback” and the reviewer’s initials added.
-•	Example:
-o	yyyymmdd_GAM_SiteMetadata_Feedback_OU.pdf
-o	yyyymmdd_GAM_SiteMetadata_Feedback_OU.xlsx
-•	Specific cases (such as Arches ingestion results) should also be stored here, with the same naming logic.
-o	Example:
-20250807_GAM_ArchesManualEntry_Feedback_OU.pdf
-Why this matters: Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.</p>
+<em><strong>Examples:</strong></em></p>
+<ul class="simple">
+<li><p>yyyymmdd_GAM_SiteMetadata_Feedback_OU.pdf</p></li>
+<li><p>yyyymmdd_GAM_SiteMetadata_Feedback_OU.xlsx</p></li>
+</ul>
+<p>Specific cases (such as Arches ingestion results) should also be stored here, with the same naming logic.</p>
+<p><em><strong>Example:</strong></em>
+20250807_GAM_ArchesManualEntry_Feedback_OU.pdf</p>
+<p><strong>Why this matters:</strong> Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.</p>
 </section>
 <section id="templates">
 <h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
 <p>This folder contains the official templates for metadata and related documents.
-•	Typical contents include:
-o	Sites Metadata Schema
-o	Remote Sensing Metadata Schema
-o	Media Metadata Schema
-o	Dataset Details Template
-•	Always check this folder before beginning new work, to ensure that you are using the most up-to-date version.
-•	The Digital Data Coordinator will also inform you if templates are revised.
-Why this matters: Templates guarantee consistency. If everyone uses the same structure, datasets from different countries or contributors can be merged smoothly, without time-consuming reformatting.</p>
+Typical contents include:</p>
+<ul class="simple">
+<li><p>Sites Metadata Schema</p></li>
+<li><p>Remote Sensing Metadata Schema</p></li>
+<li><p>Media Metadata Schema</p></li>
+<li><p>Dataset Details Template</p></li>
+</ul>
+<p>Always check this folder before beginning new work, to ensure that you are using the most up-to-date version.</p>
+<p>The Digital Data Coordinator will also inform you if templates are revised.</p>
+<p><strong>Why this matters:</strong> Templates guarantee consistency. If everyone uses the same structure, datasets from different countries or contributors can be merged smoothly, without time-consuming reformatting.</p>
 </section>
 <section id="reports">
 <h3>Reports<a class="headerlink" href="#reports" title="Link to this heading">#</a></h3>
 <p>The Reports folder contains technical reports related to the dataset lifecycle.
-•	Examples include:
-o	Merge reports (e.g., combining versions or datasets)
-o	Virus scan results
-o	Checksum reports (to verify data integrity)
-•	Example naming:
-yyyymmdd_GAM_v1-v2_MergeReport_LB.pdf
-Why this matters: Reports provide evidence that the data has been checked and verified. They help build trust in the dataset by showing that quality control measures were followed. This becomes increasingly important in later phases of the project, when datasets are archived or published.</p>
+Examples include:</p>
+<ul class="simple">
+<li><p>Merge reports (e.g., combining versions or datasets)</p></li>
+<li><p>Virus scan results</p></li>
+<li><p>Checksum reports (to verify data integrity)</p></li>
+</ul>
+<p><em><strong>Example naming:</strong></em>
+yyyymmdd_GAM_v1-v2_MergeReport_LB.pdf</p>
+<p><strong>Why this matters:</strong> Reports provide evidence that the data has been checked and verified. They help build trust in the dataset by showing that quality control measures were followed. This becomes increasingly important in later phases of the project, when datasets are archived or published.</p>
 </section>
 </section>
 </section>
