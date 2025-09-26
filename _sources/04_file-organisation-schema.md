@@ -6,4 +6,4 @@ This document explains the general rules and rationale of the MAEASaM Project st
 ```{note}
 This is Version 2 of the document, created on 19/09/2025 by OU. Based on team requirements, feedback, and ongoing discussions, the document may be revised and improved.
 ```
-For questions or suggestions, please contact the Digital Data Coordinator (email).
+For questions or suggestions, please contact the [Digital Data Coordinator](mailto:ou223@cam.ac.uk).
