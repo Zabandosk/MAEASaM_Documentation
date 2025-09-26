@@ -181,6 +181,11 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="01_data-structure.html">Data Structure (or Model)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="02_metadata-schema.html">Metadata Schemas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01_sites-metadata-schema.html">Heritage Sites Metadata Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02_RS-metadata-schema.html">Remote Sensing Metadata Schema</a></li>
+</ul>
+</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="03_controlled-vocabularies.html">Controlled Vocabularies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="03.01_CV-heritage-sites.html">Heritage Sites (CV)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03.02_CV-chronology.html">Chronology (CV)</a></li>
@@ -452,16 +457,20 @@ document.write(`
 <section id="heritage-data">
 <h2>Heritage Data<a class="headerlink" href="#heritage-data" title="Link to this heading">#</a></h2>
 <p>This is the main group containing all files and folders that represent heritage data in different formats. The purpose of organising data in this way is to make the workflow predictable, so that anyone opening the dataset can immediately understand where to find specific types of information.</p>
-<hr class="docutils" />
+<hr>
 <section id="sites">
 <h3>Sites<a class="headerlink" href="#sites" title="Link to this heading">#</a></h3>
 <p>The Sites folder stores all information related to heritage site records. It is divided into two main parts:</p>
 <p><em><strong>1.	Metadata folder</strong></em></p>
 <ul class="simple">
-<li><p>Contains working spreadsheets (.xlsx).</p></li>
+<li><p>Contains working spreadsheets (<em>.xlsx</em>).</p></li>
 </ul>
 <p><em><strong>Naming convention:</strong></em>
 yyyymmdd_GAM_SiteMetadata_LB.xlsx</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Please refer to the <a class="reference internal" href="04.04_special-cases.html"><span class="std std-doc">Special Cases</span></a> section for situations where different file naming conventions may apply.</p>
+</div>
 <ul class="simple">
 <li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
 <li><p>These files must follow the MAEASaM Sites metadata template, ensuring that the data can be read consistently by both people and systems.</p></li>
@@ -480,14 +489,14 @@ yyyymmdd_GAM_SitePoints_LB</p>
 <em>.cpg, .dbf, .prj, .shp, .kml</em></p>
 <p>These are standard GIS formats required for interoperability. Other export files (e.g., <em>.shx, .qmd</em>) are optional.</p>
 <p>The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p>
+<hr>
 </section>
-<hr class="docutils" />
 <section id="remote-sensing">
 <h3>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Link to this heading">#</a></h3>
 <p>The structure of the Remote Sensing folder is the same as Sites, because it also contains metadata and geometry:</p>
 <p><em><strong>1.	Metadata folder</strong></em></p>
 <ul class="simple">
-<li><p>Spreadsheet (.xlsx), named as:</p></li>
+<li><p>Spreadsheet (<em>.xlsx</em>), named as:</p></li>
 </ul>
 <p>yyyymmdd_GAM_RSMetadata_LB.xlsx</p>
 <ul class="simple">
@@ -510,9 +519,9 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 <h3>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h3>
 <p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).</p>
 <ul class="simple">
-<li><p>A metadata spreadsheet must be included:
+<li><p>A metadata spreadsheet must be included: <br>
 01_GAM_MediaMetadata_LB.xlsx</p></li>
-<li><p>The prefix “01_” ensures this file always appears at the top of the folder, so it can be found quickly.</p></li>
+<li><p>The prefix <em>“01_”</em> ensures this file always appears at the top of the folder, so it can be found quickly.</p></li>
 <li><p>Each media file should be assigned a unique ID and short descriptive name.</p></li>
 </ul>
 <p><em><strong>Example:</strong></em></p>
@@ -525,8 +534,8 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 <p class="admonition-title">Note</p>
 <p>Media files, being secondary to the main MAEASaM repository, can benefit from this structure to simplify local management and tracking.</p>
 </div>
+<hr>
 </section>
-<hr class="docutils" />
 <section id="resources">
 <h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
 <p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.</p>
@@ -550,7 +559,7 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 This group is therefore essential for communication between project members and for long-term data preservation.</p>
 <section id="dataset-details">
 <h3>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h3>
-<p>The Dataset Details document is mandatory. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.</p>
+<p>The Dataset Details document is <strong>mandatory</strong>. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.</p>
 <p>Required contents:</p>
 <ul class="simple">
 <li><p>Responsible person(s)</p></li>
