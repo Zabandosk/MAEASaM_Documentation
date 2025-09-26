@@ -1,1 +1,1 @@
-# Data Structure
+# Data Structure (or Model)
