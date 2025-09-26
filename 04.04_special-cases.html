@@ -492,11 +492,10 @@ document.write(`
 <p>You can define your <strong>Data Group</strong> as <em>Site Data</em>, <em>Remote Sensing</em>, or <em>Media</em>.<br />
 The <strong>Responsible Person</strong> column should contain the name or initials of the team member preparing the dataset.</p>
 <p>The <strong>MAEASaM ID</strong> column is where you create incremental identifiers specific to your country.</p>
-<p><strong>Format:</strong>
-SITE-<CountryCode>-#########
-Example: SITE-KEN-00000001</p>
-<p>sql
-Kodu kopyala</p>
+<p><em><strong>Format:</strong></em>
+SITE-CountryCode-#########</p>
+<p>***Example: ***
+SITE-KEN-00000001</p>
 <p>Each ID must be paired with a corresponding entry in the <strong>Name</strong> column, which provides a clear description of the record.</p>
 <p>The <strong>File Name</strong> column should indicate the actual working file where the record is stored, so others can directly locate it in the heritage folder. <strong>Do not include the date</strong> in <em>yyyymmdd</em> format (see <em>File Naming</em>) since these are working files and are expected to be updated every time you make changes. This approach is especially useful when splitting files into batches for easier organisation.</p>
 <p>Finally, the <strong>Deadline</strong> column specifies the date by which the dataset should be ready.</p>
@@ -507,14 +506,10 @@ Kodu kopyala</p>
 <h2>Working with multiple batches<a class="headerlink" href="#working-with-multiple-batches" title="Link to this heading">#</a></h2>
 <p>In some cases, a country folder may contain very large numbers of records, or information needs to be divided into smaller sets to allow efficient ingestion, checking, and correction. In such cases, data can be organised into batches while still tracked through the same Data Tracker logic.</p>
 <p>For batches, apply the file naming convention with a batch number:</p>
-<p><strong>Format:</strong>
+<p><em><strong>Format:</strong></em>
 yyyymmdd_Group_Title_b##_Initials_v##.format</p>
-<p>makefile
-Kodu kopyala</p>
-<p><strong>Example:</strong>
+<p><em><strong>Example:</strong></em>
 20250913_KEN_SitePoints_b01_LB_v01.xlsx</p>
-<p>swift
-Kodu kopyala</p>
 <section id="example-data-tracker-with-batches">
 <h3>Example – Data Tracker with batches<a class="headerlink" href="#example-data-tracker-with-batches" title="Link to this heading">#</a></h3>
 <div class="pst-scrollable-table-container"><table class="table">
