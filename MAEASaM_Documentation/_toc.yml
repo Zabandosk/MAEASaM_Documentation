@@ -6,18 +6,30 @@ root: 00_intro
 chapters:
 - file: 01_data-structure
   sections:
-  - file: 02_Metadata-Templates
+  - file: 02_metadata-schema
     sections:
-    - file: 02.01_Sites-Template
-    - file: 02.02_RS-Template
+    - file: 02.01_sites-metadata-schema
+    - file: 02.02_RS-metadata-schema
   - file: 03_controlled-vocabularies
     sections:
-    - file: 03.01_CV-HeritageSites
-    - file: 03.02_CV-Chronology
+    - file: 03.01_CV-heritage-sites
+    - file: 03.02_CV-chronology
 - file: 04_file-organisation-schema
+  sections:
+  - file: 04.01_file-naming
+  - file: 04.02_folder-hierarchy
+  - file: 04.03.1_hierarchy-text
+  - file: 04.04_special-cases
 - file: 05_dmp
 - file: 06_data-policy
-- file: 07_Guidelines
+- file: 07_guidelines
+  sections:
+  - file: 07.01_how-to-clean-spreadsheets
+  - file: 07.02_fixing-truncated-WKT
+- file: 08_templates
+  sections:
+  - file: 08.01_data-tracker
+  - file: 08.02_dataset-details
 
 # - file: notebooks
 # - file: markdown-notebooks
