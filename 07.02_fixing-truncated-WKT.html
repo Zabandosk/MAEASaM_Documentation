@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to MAEASaM Project Book &#8212; MAEASaM Documentation</title>
+    <title>Fixing Truncated WKT Values in QGIS &#8212; MAEASaM Documentation</title>
   
   
   
@@ -57,10 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '00_intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '07.02_fixing-truncated-WKT';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Structure (or Model)" href="01_data-structure.html" />
+    <link rel="next" title="Templates" href="08_templates.html" />
+    <link rel="prev" title="How to Clean Data on Spreadsheets" href="07.01_how-to-clean-spreadsheets.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -143,7 +142,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="00_intro.html">
   
   
   
@@ -174,13 +173,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00_intro.html">
                     Welcome to MAEASaM Project Book
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="01_data-structure.html">Data Structure (or Model)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="02_metadata-schema.html">Metadata Schemas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="02.01_sites-metadata-schema.html">Heritage Sites Metadata Schema</a></li>
@@ -203,9 +202,9 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="05_dmp.html">Data Management Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_data-policy.html">Data Policy</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="07_guidelines.html">Guidelines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="07_guidelines.html">Guidelines</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="07.01_how-to-clean-spreadsheets.html">How to Clean Data on Spreadsheets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07.02_fixing-truncated-WKT.html">Fixing Truncated WKT Values in QGIS</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fixing Truncated WKT Values in QGIS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_templates.html">Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -284,7 +283,7 @@
       
       
       
-      <li><a href="https://github.com/Zabandosk/MAEASaM_Documentation/issues/new?title=Issue%20on%20page%20%2F00_intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Zabandosk/MAEASaM_Documentation/issues/new?title=Issue%20on%20page%20%2F07.02_fixing-truncated-WKT.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +313,7 @@
       
       
       
-      <li><a href="_sources/00_intro.md" target="_blank"
+      <li><a href="_sources/07.02_fixing-truncated-WKT.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -396,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to MAEASaM Project Book</h1>
+    <h1>Fixing Truncated WKT Values in QGIS</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -410,22 +409,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-maeasam-project-book">
-<h1>Welcome to MAEASaM Project Book<a class="headerlink" href="#welcome-to-maeasam-project-book" title="Link to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="01_data-structure.html">Data Structure (or Model)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_file-organisation-schema.html">File Organisation Schema</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05_dmp.html">Data Management Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06_data-policy.html">Data Policy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07_guidelines.html">Guidelines</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08_templates.html">Templates</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="fixing-truncated-wkt-values-in-qgis">
+<h1>Fixing Truncated WKT Values in QGIS<a class="headerlink" href="#fixing-truncated-wkt-values-in-qgis" title="Link to this heading">#</a></h1>
+<p>One of the most important fields in our metadata schema is “WKT” (Well-Known Text). This field allows spatial data to be represented consistently across different GIS platforms and mapping systems, including Arches.</p>
+<p>A common issue encountered is that WKT values for multipolygons appear clipped when copied from QGIS into spreadsheets. This occurs because, by default, QGIS only displays the first 254 characters of a text field in the attribute table, even if the actual WKT value is longer.</p>
+<p>For example, a complete WKT value for a multipolygon starts and ends with three parentheses and follows a structure like this:
+MULTIPOLYGON Z (((x1 y1 z1, x2 y2 z2, …)))</p>
+<p>However, in a truncated value (due to the 256-character display limit), you may see something like:
+MULTIPOLYGON Z (((-16.38722637 13.332306 0, -16.38861251 13.33678417 0, -16.38620531 13.33655351 0, -16.38485019 13.33670663 0, -16.38319154 13.33698423 0, -16.38176182 13.33716558 0, -16.3806017 13.33729377 0, -16.37954492 13.33744538 0, -16.37914255 13…</p>
+<p>This indicates that the full geometry has been cut off and is not displayed completely in the attribute table.
+To display and export the complete WKT value, you need to create a new field using the Field Calculator in QGIS. Follow the steps below:</p>
+<ol class="arabic simple">
+<li><p>Right-click the layer and open the Attribute Table.</p></li>
+<li><p>Open the Field Calculator.</p></li>
+<li><p>In the “Output field name” box, enter a name such as “full_WKT” (since we are extracting the complete string).</p></li>
+<li><p>Set the “Output field type” to “Text (string)”.</p></li>
+<li><p>Set the “Output field length” to 0, ensuring there is no limit on string length.</p></li>
+<li><p>In the “Expression” box, enter the following expression:
+“geom_to_wkt($geometry)”</p></li>
+<li><p>Click Apply and then OK.
+You can also refer to the Field Calculator screenshot below, which shows the same configuration and fields used in this example.</p></li>
+</ol>
+<p>After completing these steps, reopen the attribute table. The new field “full_WKT” will display the complete WKT values without truncation.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -458,12 +463,21 @@ It shows off a few of the major file types, as well as some sample content.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="07.01_how-to-clean-spreadsheets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to Clean Data on Spreadsheets</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="01_data-structure.html"
+       href="08_templates.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Structure (or Model)</p>
+        <p class="prev-next-title">Templates</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
