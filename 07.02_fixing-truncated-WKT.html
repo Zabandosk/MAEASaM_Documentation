@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -413,24 +413,27 @@ document.write(`
 <h1>Fixing Truncated WKT Values in QGIS<a class="headerlink" href="#fixing-truncated-wkt-values-in-qgis" title="Link to this heading">#</a></h1>
 <p>One of the most important fields in our metadata schema is “WKT” (Well-Known Text). This field allows spatial data to be represented consistently across different GIS platforms and mapping systems, including Arches.</p>
 <p>A common issue encountered is that WKT values for multipolygons appear clipped when copied from QGIS into spreadsheets. This occurs because, by default, QGIS only displays the first 254 characters of a text field in the attribute table, even if the actual WKT value is longer.</p>
-<p>For example, a complete WKT value for a multipolygon starts and ends with three parentheses and follows a structure like this:
-MULTIPOLYGON Z (((x1 y1 z1, x2 y2 z2, …)))</p>
-<p>However, in a truncated value (due to the 256-character display limit), you may see something like:
-MULTIPOLYGON Z (((-16.38722637 13.332306 0, -16.38861251 13.33678417 0, -16.38620531 13.33655351 0, -16.38485019 13.33670663 0, -16.38319154 13.33698423 0, -16.38176182 13.33716558 0, -16.3806017 13.33729377 0, -16.37954492 13.33744538 0, -16.37914255 13…</p>
+<p>For example, a complete WKT value for a multipolygon starts and ends with three parentheses and follows a structure like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MULTIPOLYGON Z (((x1 y1 z1, x2 y2 z2, ...)))
+</pre></div>
+</div>
+<p>However, in a truncated value (due to the 256-character display limit), you may see something like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MULTIPOLYGON Z (((-16.38722637 13.332306 0, -16.38861251 13.33678417 0, -16.38620531 13.33655351 0, -16.38485019 13.33670663 0, -16.38319154 13.33698423 0, -16.38176182 13.33716558 0, -16.3806017 13.33729377 0, -16.37954492 13.33744538 0, -16.37914255 13...
+</pre></div>
+</div>
 <p>This indicates that the full geometry has been cut off and is not displayed completely in the attribute table.
-To display and export the complete WKT value, you need to create a new field using the Field Calculator in QGIS. Follow the steps below:</p>
-<ol class="arabic simple">
-<li><p>Right-click the layer and open the Attribute Table.</p></li>
-<li><p>Open the Field Calculator.</p></li>
-<li><p>In the “Output field name” box, enter a name such as “full_WKT” (since we are extracting the complete string).</p></li>
-<li><p>Set the “Output field type” to “Text (string)”.</p></li>
-<li><p>Set the “Output field length” to 0, ensuring there is no limit on string length.</p></li>
-<li><p>In the “Expression” box, enter the following expression:
-“geom_to_wkt($geometry)”</p></li>
-<li><p>Click Apply and then OK.
-You can also refer to the Field Calculator screenshot below, which shows the same configuration and fields used in this example.</p></li>
-</ol>
-<p>After completing these steps, reopen the attribute table. The new field “full_WKT” will display the complete WKT values without truncation.</p>
+To display and export the complete WKT value, you need to create a new field using the <strong>Field Calculator</strong> in QGIS. Follow the steps below:</p>
+<p><strong>1.</strong>	Right-click the layer and open the <em>Attribute Table</em>.
+<strong>2.</strong>	Open the Field Calculator.
+<strong>3.</strong>	In the <em>“Output field name”</em> box, enter a name such as <em>“full_WKT”</em> (since we are extracting the complete string).
+<strong>4.</strong>	Set the <em>“Output field type”</em> to <em>“Text (string)”</em>.
+<strong>5.</strong>	Set the <em>“Output field length”</em> to <em>0</em>, ensuring there is no limit on string length.
+<strong>6.</strong>	In the <em>“Expression”</em> box, enter the following expression:
+<em>“geom_to_wkt($geometry)”</em>
+<strong>7.</strong>	Click <strong>Apply</strong> and then <strong>OK</strong>.
+You can also refer to the Field Calculator screenshot below, which shows the same configuration and fields used in this example.</p>
+<p><img alt="Field Calculator" src="_images/07.02_med.01_fixingTruncatedWKT_01.jpg" /></p>
+<p>After completing these steps, reopen the attribute table. The new field <em>“full_WKT”</em> will display the complete WKT values without truncation.</p>
 </section>
 
     <script type="text/x-thebe-config">
