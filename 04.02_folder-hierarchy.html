@@ -407,7 +407,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">Heritage Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
@@ -417,8 +417,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines">Guidelines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
 </ul>
 </li>
@@ -435,8 +433,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="folder-hierarchy">
 <h1>Folder Hierarchy<a class="headerlink" href="#folder-hierarchy" title="Link to this heading">#</a></h1>
-<p>Data are divided into two main categories:</p>
-<p><em><strong>1.	Heritage Data</strong></em></p>
+<p>Files are divided into two main categories:</p>
+<p><em><strong>1.	Dataset</strong></em></p>
 <ul class="simple">
 <li><p>Sites</p></li>
 <li><p>Remote Sensing</p></li>
@@ -448,16 +446,14 @@ document.write(`
 <li><p>Reports</p></li>
 <li><p>Feedback</p></li>
 <li><p>Dataset Details</p></li>
-<li><p>Templates</p></li>
-<li><p>Guidelines</p></li>
 </ul>
 <p>This structure makes it easier to manage, review, and prepare datasets for final delivery.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>See the <a class="reference internal" href="04.03.1_hierarchy-text.html"><span class="std std-doc">Hierarchy Tree</span></a> section for a visual representation of this structure.</p>
 </div>
-<section id="heritage-data">
-<h2>Heritage Data<a class="headerlink" href="#heritage-data" title="Link to this heading">#</a></h2>
+<section id="dataset">
+<h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h2>
 <p>This is the main group containing all files and folders that represent heritage data in different formats. The purpose of organising data in this way is to make the workflow predictable, so that anyone opening the dataset can immediately understand where to find specific types of information.</p>
 <hr>
 <section id="sites">
@@ -471,7 +467,7 @@ document.write(`
 yyyymmdd_GAM_SiteMetadata_LB.xlsx</p>
 <div class="admonition-important admonition">
 <p class="admonition-title">Important</p>
-<p>Please refer to the <a class="reference internal" href="04.04_special-cases.html"><span class="std std-doc">Special Cases</span></a> section for situations where different file naming conventions may apply.</p>
+<p>Please refer to the <a class="reference internal" href="04.04_special-cases.html"><span class="std std-doc">Special Cases</span></a> section for situations where different file naming conventions may apply, such as when working with multiple batches or multiple people.</p>
 </div>
 <ul class="simple">
 <li><p>You should create a new copy of the file every day you make changes. This preserves previous versions, so if there is an error or data loss, we can go back to the last working copy.</p></li>
@@ -486,10 +482,16 @@ yyyymmdd_GAM_SiteMetadata_LB.xlsx</p>
 </ul>
 <p>Each of these subfolders must include a dated working folder.</p>
 <p><em><strong>Example</strong></em>
-yyyymmdd_GAM_SitePoints_LB</p>
+yyyymmdd_GAM_SitePoints_LB<br>
+yyyymmdd_GAM_SitePolygons_LB<br>
+yyyymmdd_GAM_SiteLines_LB</p>
 <p>Inside, files must be exported in the following formats:
 <em>.cpg, .dbf, .prj, .shp, .kml</em></p>
-<p>These are standard GIS formats required for interoperability. Other export files (e.g., <em>.shx, .qmd</em>) are optional.</p>
+<p>These are standard GIS formats required for interoperability. Other export files (e.g., <em>.shx, .qmd, .gpkg</em>) are optional.</p>
+<div class="admonition-important admonition">
+<p class="admonition-title">Important</p>
+<p>Always create the working folder first before adding shapefiles. Every time you modify the shapefiles, create a new folder with the updated date. Shapefiles must be organized inside separate, properly named folders to ensure consistency.</p>
+</div>
 <p>The reason for requiring multiple file types is that shapefiles are not a single file but a package. Without all the necessary components, the data may not open correctly in GIS software.</p>
 <hr>
 </section>
@@ -504,13 +506,25 @@ yyyymmdd_GAM_SitePoints_LB</p>
 <ul class="simple">
 <li><p>The “RS” tag ensures that metadata for remote sensing datasets is distinguishable from site metadata.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When working with multiple batches add Grid ID as subtitle, such as:</p>
+<p>yyyymmdd_SDN_RSMetadata_E27.6N15.3_TA</p>
+<p>Please visit <a class="reference internal" href="04.04_special-cases.html#using-subtitles-for-batch-differentiation"><span class="std std-ref">Special Cases - Using Subtitles for Batch Differentiation</span></a> for more details.</p>
+</div>
 <p><em><strong>2.	Geometry folder</strong></em></p>
-<p>Divided into two subfolders:</p>
+<p>Divided into the same subfolders as Points, Polygons, and Lines, with an additional Footprints subfolder:</p>
 <ul class="simple">
-<li><p>Points (e.g., sensor locations, reference points)</p></li>
+<li><p>Points</p></li>
+<li><p>Polygons</p></li>
+<li><p>Lines</p></li>
 <li><p>Footprints (areas covered by imagery or remote sensing data)</p></li>
 </ul>
 <p>Naming follows the same pattern as in Sites, but with “RS” in the title.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The general logic is roughly to follow the folder names when naming files.</p>
+</div>
 <p><em><strong>Example:</strong></em></p>
 <p>yyyymmdd_GAM_RSPoints_LB.shp <br>
 yyyymmdd_GAM_RSFootprints_LB.dbf</p>
@@ -519,11 +533,14 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 </section>
 <section id="media">
 <h3>Media<a class="headerlink" href="#media" title="Link to this heading">#</a></h3>
-<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio).</p>
+<p>The Media folder contains images and potentially other media types in the future (e.g., 3D models, videos, audio). It is organized into two subfolders: Metadata and Files.</p>
+<p><em><strong>1.	Metadata</strong></em></p>
 <ul class="simple">
-<li><p>A metadata spreadsheet must be included: <br>
-01_GAM_MediaMetadata_LB.xlsx</p></li>
-<li><p>The prefix <em>“01_”</em> ensures this file always appears at the top of the folder, so it can be found quickly.</p></li>
+<li><p>Metadata spreadsheet must be named as: <br>
+yyyymmdd_GAM_MediaMetadata_LB.xlsx</p></li>
+</ul>
+<p><em><strong>2.	Files</strong></em></p>
+<ul class="simple">
 <li><p>Each media file should be assigned a unique ID and short descriptive name.</p></li>
 </ul>
 <p><em><strong>Example:</strong></em></p>
@@ -540,15 +557,22 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 </section>
 <section id="resources">
 <h3>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h3>
-<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps.</p>
+<p>The Resources folder contains the reference materials used to create your metadata. These could include reports, articles, or maps. It is organized into two subfolders: Metadata and Files.</p>
+<p><em><strong>1.	Metadata</strong></em></p>
 <ul class="simple">
-<li><p>Metadata spreadsheet:
-01_GAM_ResourceMetadata_LB.xlsx</p></li>
-<li><p>Files should be stored in open, sustainable formats such as: <em>.pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.</em></p></li>
+<li><p>Metadata spreadsheet must be named as: <br>
+yyyymmdd_GAM_ResourceMetadata_LB.xlsx</p></li>
+</ul>
+<p><em><strong>2.	Files</strong></em></p>
+<ul class="simple">
+<li><p>Each resource should have a unique ID and descriptive title, as reflected in the metadata.</p></li>
+<li><p>Resource files should be stored in open, sustainable formats such as .pdf, .pdf/a, .csv, .jpg, .jpeg, .png, .tiff.</p></li>
+<li><p>File names should correspond to the IDs listed in the metadata.</p></li>
+<li><p>This structure reduces the risk of future accessibility problems and ensures that others can re-use and verify the sources you used.</p></li>
 </ul>
 <p><em><strong>Example:</strong></em></p>
 <p>GAM-RES-000001_TitleOfResource.pdf</p>
-<p>By storing resources in stable formats, we reduce the risk of future accessibility problems. This also ensures that others can re-use and verify the sources you used.</p>
+<p>Storing resources in stable, widely supported formats minimizes the risk of future accessibility issues and ensures that others can reliably re-use and verify the sources you have used.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>While resource management is currently handled via Zotero, this section may still be used as a supplementary location for storing resource information.</p>
@@ -557,12 +581,13 @@ yyyymmdd_GAM_RSFootprints_LB.dbf</p>
 </section>
 <section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
-<p>The Documentation group contains files that describe, explain, or support the heritage data. While the Heritage Data folders store the raw and processed data itself, the Documentation folders provide the context that makes those datasets understandable and reusable. Without documentation, the data may be difficult to interpret in the future, even for the person who originally created it.
+<p>The Documentation group contains files that describe, explain, or support the dataset. While the Dataset folders store the raw and processed data itself, the Documentation folders provide the context that makes those datasets understandable and reusable. Without documentation, the data may be difficult to interpret in the future, even for the person who originally created it.
 This group is therefore essential for communication between project members and for long-term data preservation.</p>
 <hr>
 <section id="dataset-details">
 <h3>Dataset Details<a class="headerlink" href="#dataset-details" title="Link to this heading">#</a></h3>
-<p>The Dataset Details document is <strong>mandatory</strong>. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created.</p>
+<p>This folder contains two important files as “Dataset details” and “Data Tracker”.</p>
+<p>The <strong>Dataset Details</strong> document is <strong>mandatory</strong>. It serves as a descriptive record of the dataset and ensures that others (archaeologists, archivists, or future team members) can understand what has been created. This file must also be included with the datasets in the Archival Information Package at the end of the submission period.</p>
 <p>Required contents:</p>
 <ul class="simple">
 <li><p>Responsible person(s)</p></li>
@@ -575,7 +600,14 @@ This group is therefore essential for communication between project members and 
 <p><em><strong>Example:</strong></em></p>
 <p>yyyymmdd_GAM_DatasetDetails_LB.pdf</p>
 <p><strong>Why this matters:</strong> Dataset Details act as a quick reference guide. When returning to the dataset after months or years, it helps you remember the scope and status of your work, while also informing others how to interpret and use the files.</p>
-<hr>
+<p>The other mandatory file, <strong>Data Tracker</strong>, is used to define the records to be worked on at the start of the submission period, track these records throughout the period, support auditing processes, and monitor which Archival Information Packages the final datasets are stored in.</p>
+<p>The file name should include the country code and submission period, using the following format:</p>
+<p>GAM_DataTracker_Y5SP1</p>
+<p>Here, Y5SP1 stands for Year 5 Submission Period 1.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Templates and detailed instructions for the Dataset Details and Data Tracker files will be provided soon.</p>
+</div>
 </section>
 <section id="feedback">
 <h3>Feedback<a class="headerlink" href="#feedback" title="Link to this heading">#</a></h3>
@@ -591,34 +623,6 @@ This group is therefore essential for communication between project members and 
 <p><em><strong>Example:</strong></em></p>
 <p>20250807_GAM_ArchesManualEntry_Feedback_OU.pdf</p>
 <p><strong>Why this matters:</strong> Keeping feedback in one place prevents confusion, ensures that comments are not lost, and allows the team to track the history of decisions and changes.</p>
-<hr>
-</section>
-<section id="guidelines">
-<h3>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading">#</a></h3>
-<p>The Guidelines folder contains instructions and best practices to support different aspects of data preparation. These documents are meant to assist team members in carrying out technical tasks consistently and efficiently.</p>
-<p>Expected contents:</p>
-<ul class="simple">
-<li><p>Data Cleaning Guideline</p></li>
-<li><p>Data Export from QGIS</p></li>
-<li><p>Metadata Entry Instructions</p></li>
-<li><p>File Conversion Guide</p></li>
-</ul>
-<p><strong>Why this matters:</strong> Guidelines provide step-by-step support for recurring tasks, ensuring that team members follow the same procedures. This reduces errors, saves time, and makes the overall workflow more reliable.</p>
-<hr>
-</section>
-<section id="templates">
-<h3>Templates<a class="headerlink" href="#templates" title="Link to this heading">#</a></h3>
-<p>This folder contains the official templates for metadata and related documents.
-Typical contents include:</p>
-<ul class="simple">
-<li><p>Sites Metadata Schema</p></li>
-<li><p>Remote Sensing Metadata Schema</p></li>
-<li><p>Media Metadata Schema</p></li>
-<li><p>Dataset Details Template</p></li>
-</ul>
-<p>Always check this folder before beginning new work, to ensure that you are using the most up-to-date version.</p>
-<p>The Digital Data Coordinator will also inform you if templates are revised.</p>
-<p><strong>Why this matters:</strong> Templates guarantee consistency. If everyone uses the same structure, datasets from different countries or contributors can be merged smoothly, without time-consuming reformatting.</p>
 <hr>
 </section>
 <section id="reports">
@@ -701,7 +705,7 @@ Examples include:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heritage-data">Heritage Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset">Dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sites">Sites</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote Sensing</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#media">Media</a></li>
@@ -711,8 +715,6 @@ Examples include:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-details">Dataset Details</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback">Feedback</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guidelines">Guidelines</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#templates">Templates</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports">Reports</a></li>
 </ul>
 </li>

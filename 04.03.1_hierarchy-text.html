@@ -411,8 +411,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hierarchy-tree">
 <h1>Hierarchy Tree<a class="headerlink" href="#hierarchy-tree" title="Link to this heading">#</a></h1>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GAM
-├── Heritage Data
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>CountryCode
+├── Dataset
 │   ├── Sites
 │   │   ├── Geometry
 │   │   │   ├── Points
@@ -433,35 +433,37 @@ document.write(`
 │   ├── Remote Sensing
 │   │   ├── Metadata
 │   │   │   └── yyyymmdd_CountryCode_RSMetadata_PersonInitials.xlsx
-│   │   ├── Geometry
-│   │   │   ├── Points
-│   │   │   │   └── yyyymmdd_CountryCode_RSPoints_PersonInitials
-│   │   │   │       ├── … .cpg / .dbf / .prj / .shp / .kml
-│   │   │   └── Footprints
-│   │   │       └── yyyymmdd_CountryCode_RSFootprints_PersonInitials
-│   │   │           ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │   └── Geometry
+│   │       ├── Points
+│   │       │   └── yyyymmdd_CountryCode_RSPoints_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       ├── Polygons
+│   │       │   └── yyyymmdd_CountryCode_RSPolygons_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       ├── Lines
+│   │       │   └── yyyymmdd_CountryCode_RSLines_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       └── Footprints
+│   │           └── yyyymmdd_CountryCode_RSFootprints_PersonInitials
+│   │               ├── … .cpg / .dbf / .prj / .shp / .kml
 │   ├── Media
-│   │   ├── yyyymmdd_CountryCode_MediaMetadata_PersonInitials.jpg
-│   │   └── CountryCode_MediaID_MediaName.jpg
+│   │   ├── Metadata
+│   │   │   └── yyyymmdd_CountryCode_MediaMetadata_PersonInitials.xlsx
+│   │   └── Files
+│   │       └── GAM-MED-000001_Wassu01.jpg
 │   └── Resources
-│       ├── yyyymmdd_CountryCode_ResourceMetadata_PersonInitials.jpg
-│       └── CountryCode_ResourceID_TitleOfResource.pdf
-├── Documentation
-│   ├── Dataset Details
-│   │   └── yyyymmdd_CountryCode_DatasetDetails_PersonInitials.pdf
-│   ├── Reports
-│   │   └── yyyymmdd_CountryCode_v1-v2_MergeReport_PersonInitials.pdf
-│   ├── Feedback
-│   │   └── yyyymmdd_CountryCode_SiteMetadata_Feedback_PersonInitials.pdf
-│   ├── Templates
-│   │   ├── Data Tracker.xlsx
-│   │   ├── Metadata Schema.xlsx
-│   │   ├── Controlled Vocabularies.xlsx
-│   │   └── Dataset Details Template.docx
-│   └── Guidelines
-│       ├── File Organisation Schema.pdf
-│       ├── Data Cleaning Guideline.pdf
-│       └── Folder Hierarchy.visio
+│       ├── Metadata
+│       │   └── yyyymmdd_CountryCode_ResourceMetadata_PersonInitials.xlsx
+│       └── Files
+│           └── GAM-RES-000001_TitleOfResource.pdf
+└── Documentation
+    ├── Dataset Details
+    │   ├── yyyymmdd_CountryCode_DatasetDetails_PersonInitials.pdf
+    │   └── CountryCode_DataTracker_SubmissionPeriod.xlsx
+    ├── Reports
+    │   └── yyyymmdd_CountryCode_v1-v2_MergeReport_PersonInitials.pdf
+    └── Feedback
+        └── yyyymmdd_CountryCode_SiteMetadata_Feedback_PersonInitials.pdf
 </pre></div>
 </div>
 </section>
