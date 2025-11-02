@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -204,6 +204,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_data-policy.html">Data Policy</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="07_guidelines.html">Guidelines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="07.01_how-to-clean-spreadsheets.html">How to Clean Data on Spreadsheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.02_fixing-truncated-WKT.html">Fixing Truncated WKT Values in QGIS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_templates.html">Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -410,8 +411,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hierarchy-tree">
 <h1>Hierarchy Tree<a class="headerlink" href="#hierarchy-tree" title="Link to this heading">#</a></h1>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GAM
-├── Heritage Data
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>CountryCode
+├── Dataset
 │   ├── Sites
 │   │   ├── Geometry
 │   │   │   ├── Points
@@ -432,35 +433,37 @@ document.write(`
 │   ├── Remote Sensing
 │   │   ├── Metadata
 │   │   │   └── yyyymmdd_CountryCode_RSMetadata_PersonInitials.xlsx
-│   │   ├── Geometry
-│   │   │   ├── Points
-│   │   │   │   └── yyyymmdd_CountryCode_RSPoints_PersonInitials
-│   │   │   │       ├── … .cpg / .dbf / .prj / .shp / .kml
-│   │   │   └── Footprints
-│   │   │       └── yyyymmdd_CountryCode_RSFootprints_PersonInitials
-│   │   │           ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │   └── Geometry
+│   │       ├── Points
+│   │       │   └── yyyymmdd_CountryCode_RSPoints_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       ├── Polygons
+│   │       │   └── yyyymmdd_CountryCode_RSPolygons_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       ├── Lines
+│   │       │   └── yyyymmdd_CountryCode_RSLines_PersonInitials
+│   │       │       ├── … .cpg / .dbf / .prj / .shp / .kml
+│   │       └── Footprints
+│   │           └── yyyymmdd_CountryCode_RSFootprints_PersonInitials
+│   │               ├── … .cpg / .dbf / .prj / .shp / .kml
 │   ├── Media
-│   │   ├── yyyymmdd_CountryCode_MediaMetadata_PersonInitials.jpg
-│   │   └── CountryCode_MediaID_MediaName.jpg
+│   │   ├── Metadata
+│   │   │   └── yyyymmdd_CountryCode_MediaMetadata_PersonInitials.xlsx
+│   │   └── Files
+│   │       └── GAM-MED-000001_Wassu01.jpg
 │   └── Resources
-│       ├── yyyymmdd_CountryCode_ResourceMetadata_PersonInitials.jpg
-│       └── CountryCode_ResourceID_TitleOfResource.pdf
-├── Documentation
-│   ├── Dataset Details
-│   │   └── yyyymmdd_CountryCode_DatasetDetails_PersonInitials.pdf
-│   ├── Reports
-│   │   └── yyyymmdd_CountryCode_v1-v2_MergeReport_PersonInitials.pdf
-│   ├── Feedback
-│   │   └── yyyymmdd_CountryCode_SiteMetadata_Feedback_PersonInitials.pdf
-│   ├── Templates
-│   │   ├── Data Tracker.xlsx
-│   │   ├── Metadata Schema.xlsx
-│   │   ├── Controlled Vocabularies.xlsx
-│   │   └── Dataset Details Template.docx
-│   └── Guidelines
-│       ├── File Organisation Schema.pdf
-│       ├── Data Cleaning Guideline.pdf
-│       └── Folder Hierarchy.visio
+│       ├── Metadata
+│       │   └── yyyymmdd_CountryCode_ResourceMetadata_PersonInitials.xlsx
+│       └── Files
+│           └── GAM-RES-000001_TitleOfResource.pdf
+└── Documentation
+    ├── Dataset Details
+    │   ├── yyyymmdd_CountryCode_DatasetDetails_PersonInitials.pdf
+    │   └── CountryCode_DataTracker_SubmissionPeriod.xlsx
+    ├── Reports
+    │   └── yyyymmdd_CountryCode_v1-v2_MergeReport_PersonInitials.pdf
+    └── Feedback
+        └── yyyymmdd_CountryCode_SiteMetadata_Feedback_PersonInitials.pdf
 </pre></div>
 </div>
 </section>

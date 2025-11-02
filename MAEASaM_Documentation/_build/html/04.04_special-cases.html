@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -204,6 +204,7 @@
 <li class="toctree-l1"><a class="reference internal" href="06_data-policy.html">Data Policy</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="07_guidelines.html">Guidelines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="07.01_how-to-clean-spreadsheets.html">How to Clean Data on Spreadsheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.02_fixing-truncated-WKT.html">Fixing Truncated WKT Values in QGIS</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="08_templates.html">Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -412,6 +413,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-batches">Working with multiple batches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker-with-batches">Example – Data Tracker with batches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subtitles-for-batch-differentiation">Using Subtitles for Batch Differentiation:</a></li>
 </ul>
 </li>
 </ul>
@@ -575,6 +577,16 @@ The <strong>Responsible Person</strong> column should contain the name or initia
 </ul>
 <p>This table shows only six records for clarity. In practice, batches may include 50, 100, or more records depending on project requirements.</p>
 </section>
+<section id="using-subtitles-for-batch-differentiation">
+<h3>Using Subtitles for Batch Differentiation:<a class="headerlink" href="#using-subtitles-for-batch-differentiation" title="Link to this heading">#</a></h3>
+<p>Sometimes, different subtitle formats can be used to separate batches, such as by country name, data group, or grid reference:</p>
+<ul class="simple">
+<li><p>KEN_SiteMetadata_Demo_AK</p></li>
+<li><p>KEN_SiteMetadata_Mombasa_AK</p></li>
+<li><p>SDN_RSMetadata_E27.6N15.3_TA</p></li>
+</ul>
+<p>Esecially when working with <strong>remote sensing data</strong>, batches <strong>must be</strong> organized according to grid references to facilitate processing and tracking.</p>
+</section>
 </section>
 </section>
 
@@ -648,6 +660,7 @@ The <strong>Responsible Person</strong> column should contain the name or initia
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-multiple-batches">Working with multiple batches</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-data-tracker-with-batches">Example – Data Tracker with batches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-subtitles-for-batch-differentiation">Using Subtitles for Batch Differentiation:</a></li>
 </ul>
 </li>
 </ul>

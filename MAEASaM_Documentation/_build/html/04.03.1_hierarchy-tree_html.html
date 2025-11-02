@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Remote Sensing Metadata Template &#8212; MAEASaM Documentation</title>
+    <title>Tree with Expandible Items &#8212; MAEASaM Documentation</title>
   
   
   
@@ -57,11 +57,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '02.02_RS-Template';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04.03.1_hierarchy-tree_html';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Controlled Vocabularies" href="03_controlled-vocabularies.html" />
-    <link rel="prev" title="Heritage Sites Metadata Template" href="02.01_Sites-Template.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -124,6 +122,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,23 +179,39 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="01_data-structure.html">Data Structure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="02_Metadata-Templates.html">Metadata Templates</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="02.01_Sites-Template.html">Heritage Sites Metadata Template</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Remote Sensing Metadata Template</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="01_data-structure.html">Data Structure (or Model)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="02_metadata-schema.html">Metadata Schemas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="02.01_sites-metadata-schema.html">Heritage Sites Metadata Schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02.02_RS-metadata-schema.html">Remote Sensing Metadata Schema</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="03_controlled-vocabularies.html">Controlled Vocabularies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="03.01_CV-HeritageSites.html">Heritage Sites (CV)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="03.02_CV-Chronology.html">Chronology (CV)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.01_CV-heritage-sites.html">Heritage Sites (CV)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03.02_CV-chronology.html">Chronology (CV)</a></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="04_file-organisation-schema.html">File Organisation Schema</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04_file-organisation-schema.html">File Organisation Schema</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04.01_file-naming.html">File Naming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.02_folder-hierarchy.html">Folder Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.03.1_hierarchy-text.html">Hierarchy Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.04_special-cases.html">Special Cases</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="05_dmp.html">Data Management Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="06_data-policy.html">Data Policy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="07_guidelines.html">Guidelines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="07.01_how-to-clean-spreadsheets.html">How to Clean Data on Spreadsheets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07.02_fixing-truncated-WKT.html">Fixing Truncated WKT Values in QGIS</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="08_templates.html">Templates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="08.01_data-tracker.html">Data Tracker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08.02_dataset-details.html">Dataset Details</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -267,7 +283,7 @@
       
       
       
-      <li><a href="https://github.com/Zabandosk/MAEASaM_Documentation/issues/new?title=Issue%20on%20page%20%2F02.02_RS-Template.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Zabandosk/MAEASaM_Documentation/issues/new?title=Issue%20on%20page%20%2F04.03.1_hierarchy-tree_html.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +313,7 @@
       
       
       
-      <li><a href="_sources/02.02_RS-Template.md" target="_blank"
+      <li><a href="_sources/04.03.1_hierarchy-tree_html.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Remote Sensing Metadata Template</h1>
+    <h1>Tree with Expandible Items</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,9 +409,84 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="remote-sensing-metadata-template">
-<h1>Remote Sensing Metadata Template<a class="headerlink" href="#remote-sensing-metadata-template" title="Link to this heading">#</a></h1>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="tree-with-expandible-items">
+<h1>Tree with Expandible Items<a class="headerlink" href="#tree-with-expandible-items" title="Link to this heading">#</a></h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GAM Folder Hierarchy</title>
+<link rel="stylesheet" href="_static/styles/styles.css" />
+</head>
+<body>
+ <ul id="myUL">
+  <li><span class="caret">Heritage Data</span>
+    <ul class="nested">
+      <li>Phase 1</li>
+      <li><span class="caret">Phase 2</span>
+        <ul class="nested">
+          <li>GAM</li>
+          <li>KEN</li>
+          <li><span class="caret">SDN</span>
+            <ul class="nested">
+              <li><span class="caret">SIP</span>
+                <ul class="nested">
+                    <li><span class="caret">Year 5</span>
+                        <ul class="nested">
+                            <li><span class="caret">SP1</span>
+                                <ul class="nested">
+                                    <li><span class="caret">Dataset</span>
+                                        <ul class="nested">
+                                            <li><span class="caret">Sites</span>
+                                                <ul class="nested">
+                                                    <li>Metadata</li>
+                                                    <li><span class="caret">Geometry</span>
+                                                        <ul class="nested">
+                                                            <li>Points</li>
+                                                            <li>Polygons</li>   
+                                                            <li>Lines</li>                                   
+                                                        </ul>                                     
+                                                </ul>
+                                            </li>
+                                            <li>Remote Sensing</li>  
+                                            <li>Media</li>
+                                            <li>Resources</li>                                    
+                                        </ul>
+                                    </li>
+                                    <li><span class="caret">Documentation</span>
+                                        <ul class="nested">
+                                            <li>Dataset Details</li>
+                                            <li>Feedback</li>  
+                                            <li>Report</li>                                 
+                                        </ul>
+                                    </li>                                 
+                                </ul>
+<hr>
+                            </li>               
+                            
+                            
+
+                            <li>SP2</li>
+                            <li>SP3</li>
+                        </ul>
+                    </li>               
+                    <li>Year 6</li>
+                    <li>Year 7</li>
+                    <li>Year 8</li>
+                </ul>
+              <li>AIP</li>
+              <li>DIP</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+  <script src="_static/scripts/function.js"></script>
+</body>
+</html></section>
 
     <script type="text/x-thebe-config">
     {
@@ -427,24 +518,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="02.01_Sites-Template.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Heritage Sites Metadata Template</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="03_controlled-vocabularies.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Controlled Vocabularies</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
