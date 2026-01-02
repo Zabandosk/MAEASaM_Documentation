@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -414,11 +414,11 @@ document.write(`
 <p>One of the most important fields in our metadata schema is “WKT” (Well-Known Text). This field allows spatial data to be represented consistently across different GIS platforms and mapping systems, including Arches.</p>
 <p>A common issue encountered is that WKT values for multipolygons appear clipped when copied from QGIS into spreadsheets. This occurs because, by default, QGIS only displays the first 254 characters of a text field in the attribute table, even if the actual WKT value is longer.</p>
 <p>For example, a complete WKT value for a multipolygon starts and ends with three parentheses and follows a structure like this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MULTIPOLYGON Z (((x1 y1 z1, x2 y2 z2, ...)))
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MultiPolygon Z (((x1 y1 z1, x2 y2 z2, ...)))
 </pre></div>
 </div>
 <p>However, in a truncated value (due to the 254-character display limit), you may see something like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MULTIPOLYGON Z (((-16.38722637 13.332306 0, -16.38861251 13.33678417 0, -16.38620531 13.33655351 0, -16.38485019 13.33670663 0, -16.38319154 13.33698423 0, -16.38176182 13.33716558 0, -16.3806017 13.33729377 0, -16.37954492 13.33744538 0, -16.37914255 13...
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    MultiPolygon Z (((-16.38722637 13.332306 0, -16.38861251 13.33678417 0, -16.38620531 13.33655351 0, -16.38485019 13.33670663 0, -16.38319154 13.33698423 0, -16.38176182 13.33716558 0, -16.3806017 13.33729377 0, -16.37954492 13.33744538 0, -16.37914255 13...
 </pre></div>
 </div>
 <p>This indicates that the full geometry has been cut off and is not displayed completely in the attribute table.
